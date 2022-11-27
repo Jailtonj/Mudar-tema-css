@@ -4,12 +4,33 @@
 }
 
 #light,
-:root {
-    --bg
+:root:has(#light:checked) {
+    --bg-color: white;
+    --text-color: #121214
+}
+
+#dark,
+:root:has(#dark:checked) {
+    --bg-color: #121214;
+    --text-color: white;
+}
+
+#blue,
+:root:has(#blue:checked) {
+    --bg-color: #402277;
+    --text-color: rgb(13, 171, 192);
+}
+
+#green,
+:root:has(#green:checked) {
+    --bg-color: #035a20;
+    --text-color: white;
 }
 
 body {
     font-family: sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 article {
